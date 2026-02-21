@@ -1,0 +1,158 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "titre": "Introduction à TypeScript",
+      "auteur": "Jean Dupont",
+      "date": "2024-02-01",
+      "contenu": "TypeScript est un sur-ensemble typé de JavaScript qui se compile en JavaScript simple."
+    },
+    {
+      "id": "2",
+      "titre": "Pourquoi utiliser AJAX ?",
+      "auteur": "Marie Curie",
+      "date": "2024-02-05",
+      "contenu": "AJAX permet de mettre à jour des parties d'une page web sans recharger la page entière."
+    },
+    {
+      "id": "3",
+      "titre": "Les bases de jQuery",
+      "auteur": "Alan Turing",
+      "date": "2024-02-10",
+      "contenu": "jQuery est une bibliothèque JavaScript rapide, petite et riche en fonctionnalités."
+    },
+    {
+      "id": "4",
+      "titre": "Comprendre JSON Server",
+      "auteur": "Grace Hopper",
+      "date": "2024-02-12",
+      "contenu": "JSON Server permet de créer une fausse API REST complète sans aucun code en moins de 30 secondes."
+    },
+    {
+      "id": "5",
+      "titre": "Le développement Web moderne",
+      "auteur": "Tim Berners-Lee",
+      "date": "2024-02-15",
+      "contenu": "Le web a beaucoup évolué depuis ses débuts, avec des frameworks et des outils puissants."
+    },
+    {
+      "id": "6",
+      "titre": "Astuces CSS",
+      "auteur": "Ada Lovelace",
+      "date": "2024-02-18",
+      "contenu": "Flexbox et Grid ont révolutionné la mise en page sur le web."
+    },
+    {
+      "id": "7",
+      "titre": "Déboguer avec Chrome DevTools",
+      "auteur": "Hedy Lamarr",
+      "date": "2024-02-20",
+      "contenu": "Savoir utiliser les outils de développement est essentiel pour tout développeur web."
+    },
+    {
+      "id": "81e4",
+      "titre": "Introduction à au c#",
+      "auteur": "Jehiel",
+      "contenu": "Quel langage utilisé en 2026 ?",
+      "date": "02/21/2026"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": 1,
+      "date": "2024-02-02",
+      "contenu": "Super article pour débuter !"
+    },
+    {
+      "id": "2",
+      "postId": 1,
+      "date": "2024-02-03",
+      "contenu": "J'ai hâte de voir la suite."
+    },
+    {
+      "id": "3",
+      "postId": 2,
+      "date": "2024-02-06",
+      "contenu": "Très utile, merci."
+    },
+    {
+      "id": "4",
+      "postId": 2,
+      "date": "2024-02-07",
+      "contenu": "Est-ce que Fetch est mieux ?"
+    },
+    {
+      "id": "5",
+      "postId": 3,
+      "date": "2024-02-11",
+      "contenu": "jQuery est encore utilisé ?"
+    },
+    {
+      "id": "6",
+      "postId": 3,
+      "date": "2024-02-11",
+      "contenu": "Oui, pour des projets legacy ou simples."
+    },
+    {
+      "id": "7",
+      "postId": 4,
+      "date": "2024-02-13",
+      "contenu": "Incroyable cet outil."
+    },
+    {
+      "id": "8",
+      "postId": 5,
+      "date": "2024-02-16",
+      "contenu": "Vivement le prochain sprint."
+    },
+    {
+      "id": "9",
+      "postId": 6,
+      "date": "2024-02-19",
+      "contenu": "Grid est compliqué mais puissant."
+    },
+    {
+      "id": "10",
+      "postId": 7,
+      "date": "2024-02-21",
+      "contenu": "Merci pour les astuces."
+    },
+    {
+      "id": "f3c0",
+      "contenu": "Quel langage",
+      "postId": 1,
+      "date": "2026-02-21"
+    },
+    {
+      "id": "7747",
+      "contenu": "je n'aime pas personnellement. Un peu dur la syntaxe.",
+      "postId": 1,
+      "date": "2026-02-21"
+    },
+    {
+      "id": "109f",
+      "contenu": "Dans tout les cas c'est très ancien jQuery.",
+      "postId": 3,
+      "date": "2026-02-21"
+    },
+    {
+      "id": "8c51",
+      "contenu": "Le C# est le meilleur langage au monde !! \nIl est très réputé pour sa robustesse et très bien sécurisé.",
+      "postId": 81,
+      "date": "2026-02-21"
+    },
+    {
+      "id": "ab9e",
+      "contenu": "Le C# est le meilleur langage au monde !! Il est très réputé pour sa robustesse et très bien sécurisé.\nJe l'aime beaucoup.",
+      "postId": "81e4",
+      "date": "2026-02-21"
+    },
+    {
+      "id": "a983",
+      "contenu": "Je ne le comprends toujours pas .",
+      "postId": "4",
+      "date": "2026-02-21"
+    }
+  ]
+}

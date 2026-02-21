@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "jquery": "^4.0.0",
+    "sass": "^1.97.3"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.33",
+    "@types/jqueryui": "^1.12.24",
+    "cypress": "^15.10.0",
+    "typescript": "^5.9.3"
+  }
+}

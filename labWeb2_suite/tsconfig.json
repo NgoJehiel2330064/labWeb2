@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "commonjs",
+      "rootDir": "./src",    // 👈 Où tu écris tes fichiers .ts
+      "outDir": "./dist",    // 👈 Où le JS sera généré
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*"]  // 👈 On dit de compiler tout ce qui est dans src
+  }

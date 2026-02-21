@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS : Framework CSS pour le style et le responsive -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    
+    <!-- Bootstrap Icons : Bibliothèque d'icônes -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts : Lora pour les titres, Open Sans pour le contenu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Variables CSS personnalisées pour les couleurs et typographie -->
+    <style>
+        :root {
+            --color-dark: #222831;
+            --color-gray: #393E46;
+            --color-turquoise: #00ADB5;
+            --color-light: #EEEEEE;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--color-dark);
+            background-color: white;
+        }
+        h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+            font-family: 'Lora', serif;
+            color: var(--color-dark);
+        }
+        
+        /* Navbar personnalisée */
+        .navbar {
+            background-color: var(--color-light) !important;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: var(--color-gray) !important;
+        }
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: var(--color-turquoise) !important;
+        }
+        
+        /* Boutons personnalisés */
+        .btn-primary-custom {
+            background-color: var(--color-dark) !important;
+            border-color: var(--color-dark) !important;
+            color: white !important;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--color-gray) !important;
+            border-color: var(--color-gray) !important;
+        }
+        .btn-outline-primary-custom {
+            color: var(--color-dark) !important;
+            border-color: var(--color-dark) !important;
+            background-color: transparent !important;
+        }
+        .btn-outline-primary-custom:hover {
+            background-color: var(--color-dark) !important;
+            border-color: var(--color-dark) !important;
+            color: white !important;
+        }
+        
+        /* Footer personnalisé */
+        .footer-custom {
+            background-color: var(--color-light) !important;
+        }
+        
+        /* Liens personnalisés */
+        a {
+            color: var(--color-turquoise);
+        }
+        a:hover {
+            color: var(--color-gray);
+        }
+        
+        /* Icônes personnalisées */
+        .text-turquoise {
+            color: var(--color-turquoise) !important;
+        }
+    </style>
+    
+    <title>CEPI - Connexion</title>
+</head>
+<body>
+
+    <!-- NAVBAR (Barre de navigation) -->
+    <!-- navbar : Composant de navigation Bootstrap -->
+    <!-- navbar-expand-lg : Responsive, devient hamburger menu sur écrans plus petits que lg (992px) -->
+    <!-- navbar-light : Style clair pour le texte -->
+    <!-- bg-white : Fond blanc -->
+    <!-- shadow-sm : Petite ombre portée -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <!-- container-fluid : Conteneur pleine largeur -->
+        <div class="container-fluid px-4">
+            <!-- Logo à gauche -->
+            <a class="navbar-brand" href="principal.html">
+                <img src="image/logo.png" alt="Logo" width="120" height="80" class="d-none d-md-block">
+                <!-- Version plus petite du logo sur mobile -->
+                <img src="image/logo.png" alt="Logo" width="60" height="40" class="d-block d-md-none">
+            </a>
+            
+            <!-- Bouton hamburger pour mobile/tablette -->
+            <!-- navbar-toggler : Bouton qui apparaît sur écrans plus petits que lg -->
+            <!-- data-bs-toggle="collapse" : Active/désactive le menu responsive -->
+            <!-- data-bs-target : L'élément à afficher/masquer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menu collapsible (se cache sur mobile/tablette) -->
+            <!-- collapse : Se replie sur petits écrans -->
+            <!-- navbar-collapse : Composant de collapse pour navbar -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- navbar-nav : Liste de navigation Bootstrap -->
+                <!-- mx-auto : Margin auto horizontal (centre l'élément sur grand écran) -->
+                <!-- text-center text-lg-start : Centré sur mobile, à gauche sur desktop -->
+                <ul class="navbar-nav mx-auto text-center text-lg-start">
+                    <!-- nav-item : Item de navigation -->
+                    <!-- me-lg-4 : Margin-end niveau 4 uniquement sur grand écran -->
+                    <li class="nav-item me-lg-4">
+                        <a class="nav-link" href="#">Menu1</a>
+                    </li>
+                    <li class="nav-item me-lg-4">
+                        <a class="nav-link" href="#">Menu2</a>
+                    </li>
+                    <li class="nav-item me-lg-4">
+                        <a class="nav-link" href="#">Menu3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu4</a>
+                    </li>
+                </ul>
+                
+                <!-- Icône utilisateur à droite -->
+                <!-- text-center text-lg-start : Centré sur mobile, aligné normalement sur desktop -->
+                <ul class="navbar-nav text-center text-lg-start">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <!-- bi bi-person-circle : Icône Bootstrap Icons -->
+                            <!-- fs-2 : Font-size niveau 2 (grande taille) -->
+                            <i class="bi bi-person-circle fs-2"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL - FORMULAIRE DE CONNEXION -->
+    <!-- container : Conteneur avec largeur max et centré -->
+    <!-- my-5 : Margin vertical niveau 5 -->
+    <!-- px-3 : Padding horizontal niveau 3 sur mobile -->
+    <div class="container my-5 px-3">
+        <!-- row : Ligne du système de grille Bootstrap -->
+        <!-- justify-content-center : Centre le contenu horizontalement -->
+        <div class="row justify-content-center">
+            <!-- col-12 : Sur mobile prend 12 col (pleine largeur) -->
+            <!-- col-sm-10 : Sur petit écran prend 10 col -->
+            <!-- col-md-6 : Sur tablette prend 6 col -->
+            <!-- col-lg-4 : Sur desktop prend 4 col -->
+            <!-- Crée un formulaire centré de largeur adaptative -->
+            <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+                
+                <!-- CARTE DE CONNEXION -->
+                <!-- card : Composant carte Bootstrap -->
+                <!-- shadow : Ombre portée pour la carte -->
+                <!-- p-4 : Padding niveau 4 à l'intérieur -->
+                <div class="card shadow p-4">
+                    
+                    <!-- Icône utilisateur en haut -->
+                    <!-- text-center : Centre le contenu -->
+                    <!-- mb-4 : Margin-bottom niveau 4 -->
+                    <div class="text-center mb-4">
+                        <!-- fs-1 : Font-size niveau 1 (très grande taille) -->
+                        <!-- text-secondary : Couleur grise -->
+                        <i class="bi bi-person-circle fs-1 text-secondary" style="font-size: 5rem;"></i>
+                    </div>
+                    
+                    <!-- FORMULAIRE -->
+                    <form>
+                        <!-- Champ Email/Username -->
+                        <!-- mb-3 : Margin-bottom niveau 3 -->
+                        <div class="mb-3">
+                            <!-- form-label : Label Bootstrap pour formulaire -->
+                            <label for="username" class="form-label">Username or Email</label>
+                            <!-- form-control : Classe Bootstrap pour inputs -->
+                            <input type="text" class="form-control" id="username" placeholder="Enter username or email">
+                        </div>
+                        
+                        <!-- Champ Password -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        
+                        <!-- Checkbox Remember Me -->
+                        <!-- form-check : Classe Bootstrap pour checkbox -->
+                        <div class="mb-3 form-check">
+                            <!-- form-check-input : Input checkbox Bootstrap -->
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <!-- form-check-label : Label pour checkbox -->
+                            <label class="form-check-label" for="remember">
+                                Remember me
+                            </label>
+                        </div>
+                        
+                        <!-- Bouton de connexion -->
+                        <!-- btn : Classe de base pour bouton Bootstrap -->
+                        <!-- btn-dark : Bouton de couleur foncée -->
+                        <!-- w-100 : Width 100% (pleine largeur) -->
+                        <!-- mb-3 : Margin-bottom niveau 3 -->
+                        <button type="submit" class="btn btn-dark w-100 mb-3">Login</button>
+                        
+                        <!-- Lien mot de passe oublié -->
+                        <!-- text-center : Centre le texte -->
+                        <!-- small : Texte plus petit -->
+                        <div class="text-center">
+                            <small><a href="#" class="text-decoration-none">Forgot password?</a></small>
+                        </div>
+                    </form>
+                    
+                    <!-- Séparateur -->
+                    <!-- my-4 : Margin vertical niveau 4 -->
+                    <hr class="my-4">
+                    
+                    <!-- Bouton Sign Up -->
+                    <!-- btn-outline-dark : Bouton avec bordure noire (style outline) -->
+                    <!-- w-100 : Width 100% (pleine largeur) -->
+                    <button type="button" class="btn btn-outline-dark w-100">Sign Up</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER (Pied de page) -->
+    <!-- bg-light : Fond gris clair -->
+    <!-- py-4 : Padding vertical niveau 4 -->
+    <!-- mt-5 : Margin-top niveau 5 -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container text-center">
+            <!-- Section des icônes réseaux sociaux -->
+            <div class="mb-3">
+                <!-- text-dark : Texte/icône noir -->
+                <!-- me-4 : Margin-end (droite) niveau 4 -->
+                <!-- fs-4 : Font-size niveau 4 -->
+                <a href="#" class="text-dark me-4 fs-4"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark me-4 fs-4"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark fs-4"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <!-- Texte de copyright -->
+            <!-- mb-1 : Margin-bottom niveau 1 (petit) -->
+            <p class="mb-1">Centre d'Expertise et de Perfectionnement en Informatique</p>
+            <!-- mb-0 : Pas de margin bottom -->
+            <p class="mb-0">2022</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JavaScript Bundle (inclut Popper pour les menus) -->
+    <!-- Nécessaire pour les composants interactifs Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
