@@ -54,13 +54,16 @@ function chargerPublication(id: string) {
 // 3. Charger et afficher les commentaires 
 function chargerCommentaires(id: string) {
     $.ajax({
-        url: `http://localhost:3000/comments?postId=${id}`,
+        url: `http://localhost:3000/comments`,
         method: 'GET',
         success: (commentaires : Commentaire[]) => {
             const $listeCommentaires = $('#liste-commentaires');
             $listeCommentaires.empty();
 
-            commentaires.forEach(com => {
+            // Filtrer côté client pour gérer les postId string ET number
+            const filtres = commentaires.filter(com => String(com.postId) === id);
+
+            filtres.forEach(com => {
                 const bloc = `
                     <div class="d-flex gap-3 mb-4">
                         <div>
@@ -94,31 +97,29 @@ function envoyerCommentaire(id: string) {
             return; // On arrête l'exécution de la fonction ici
         }
 
-        // On prépare les données à envoyer
+        // On prépare les données à envoyer avec postId en string pour cohérence
         const nouveauCommentaire = {
             contenu: contenu.trim(),
-            postId: id, // On s'assure que c'est bien un nombre
+            postId: id,
             date: today
         };
 
         // Requête POST vers ton serveur
-        fetch('http://localhost:3000/comments', {
+        $.ajax({
+            url: 'http://localhost:3000/comments',
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json; charset=UTF-8',
+            contentType: 'application/json; charset=UTF-8',
+            data: JSON.stringify(nouveauCommentaire),
+            success: (json: Commentaire) => {
+                console.log("Commentaire ajouté :", json);
+                
+                // 1. On vide manuellement le textarea
+                $('#form-commentaire textarea').val('');
+                
+                // 2. On recharge la liste pour afficher le nouveau commentaire
+                chargerCommentaires(id);
             },
-            body: JSON.stringify(nouveauCommentaire),
-        })
-        .then((response) => response.json())
-        .then((json) => {
-            console.log("Commentaire ajouté :", json);
-            
-            // 1. On vide manuellement le textarea
-            $('#form-commentaire textarea').val('');
-            
-            // 2. On recharge la liste pour afficher le nouveau commentaire
-            chargerCommentaires(id);
-        })
-        .catch((error) => console.error('Erreur:', error));
+            error: (err) => console.error('Erreur:', err)
+        });
     });
 }

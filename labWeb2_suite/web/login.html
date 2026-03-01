@@ -4,89 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Bootstrap CSS : Framework CSS pour le style et le responsive -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     
-    <!-- Bootstrap Icons : Bibliothèque d'icônes -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     
     <!-- Google Fonts : Lora pour les titres, Open Sans pour le contenu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- Variables CSS personnalisées pour les couleurs et typographie -->
-    <style>
-        :root {
-            --color-dark: #222831;
-            --color-gray: #393E46;
-            --color-turquoise: #00ADB5;
-            --color-light: #EEEEEE;
-        }
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--color-dark);
-            background-color: white;
-        }
-        h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
-            font-family: 'Lora', serif;
-            color: var(--color-dark);
-        }
-        
-        /* Navbar personnalisée */
-        .navbar {
-            background-color: var(--color-light) !important;
-        }
-        .navbar-light .navbar-nav .nav-link {
-            color: var(--color-gray) !important;
-        }
-        .navbar-light .navbar-nav .nav-link:hover {
-            color: var(--color-turquoise) !important;
-        }
-        
-        /* Boutons personnalisés */
-        .btn-primary-custom {
-            background-color: var(--color-dark) !important;
-            border-color: var(--color-dark) !important;
-            color: white !important;
-        }
-        .btn-primary-custom:hover {
-            background-color: var(--color-gray) !important;
-            border-color: var(--color-gray) !important;
-        }
-        .btn-outline-primary-custom {
-            color: var(--color-dark) !important;
-            border-color: var(--color-dark) !important;
-            background-color: transparent !important;
-        }
-        .btn-outline-primary-custom:hover {
-            background-color: var(--color-dark) !important;
-            border-color: var(--color-dark) !important;
-            color: white !important;
-        }
-        
-        /* Footer personnalisé */
-        .footer-custom {
-            background-color: var(--color-light) !important;
-        }
-        
-        /* Liens personnalisés */
-        a {
-            color: var(--color-turquoise);
-        }
-        a:hover {
-            color: var(--color-gray);
-        }
-        
-        /* Icônes personnalisées */
-        .text-turquoise {
-            color: var(--color-turquoise) !important;
-        }
-    </style>
+
+    <!-- CSS personnalisé compilé depuis SCSS -->
+    <link rel="stylesheet" href="../css/custom.css">
     
     <title>CEPI - Connexion</title>
 </head>
-<body>
+<body class="bg-dark text-white">
 
     <!-- NAVBAR (Barre de navigation) -->
     <!-- navbar : Composant de navigation Bootstrap -->
@@ -94,7 +28,7 @@
     <!-- navbar-light : Style clair pour le texte -->
     <!-- bg-white : Fond blanc -->
     <!-- shadow-sm : Petite ombre portée -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm border border-bottom border-white">
         <!-- container-fluid : Conteneur pleine largeur -->
         <div class="container-fluid px-4">
             <!-- Logo à gauche -->
@@ -123,16 +57,16 @@
                     <!-- nav-item : Item de navigation -->
                     <!-- me-lg-4 : Margin-end niveau 4 uniquement sur grand écran -->
                     <li class="nav-item me-lg-4">
-                        <a class="nav-link" href="#">Menu1</a>
+                        <a class="nav-link text-white" href="#">Menu1</a>
                     </li>
                     <li class="nav-item me-lg-4">
-                        <a class="nav-link" href="#">Menu2</a>
+                        <a class="nav-link text-white" href="#">Menu2</a>
                     </li>
                     <li class="nav-item me-lg-4">
-                        <a class="nav-link" href="#">Menu3</a>
+                        <a class="nav-link text-white" href="#">Menu3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu4</a>
+                        <a class="nav-link text-white" href="#">Menu4</a>
                     </li>
                 </ul>
                 
@@ -140,7 +74,7 @@
                 <!-- text-center text-lg-start : Centré sur mobile, aligné normalement sur desktop -->
                 <ul class="navbar-nav text-center text-lg-start">
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">
+                        <a class="nav-link text-white" href="login.html">
                             <!-- bi bi-person-circle : Icône Bootstrap Icons -->
                             <!-- fs-2 : Font-size niveau 2 (grande taille) -->
                             <i class="bi bi-person-circle fs-2"></i>
@@ -242,16 +176,16 @@
     <!-- bg-light : Fond gris clair -->
     <!-- py-4 : Padding vertical niveau 4 -->
     <!-- mt-5 : Margin-top niveau 5 -->
-    <footer class="bg-light py-4 mt-5">
-        <div class="container text-center">
+    <footer class="bg-dark py-4 mt-5 border-top border-white">
+        <div class="container text-center text-white">
             <!-- Section des icônes réseaux sociaux -->
             <div class="mb-3">
                 <!-- text-dark : Texte/icône noir -->
                 <!-- me-4 : Margin-end (droite) niveau 4 -->
                 <!-- fs-4 : Font-size niveau 4 -->
-                <a href="#" class="text-dark me-4 fs-4"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="text-dark me-4 fs-4"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="text-dark fs-4"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white me-4 fs-4"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-4 fs-4"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
             </div>
             <!-- Texte de copyright -->
             <!-- mb-1 : Margin-bottom niveau 1 (petit) -->

@@ -153,6 +153,25 @@
       "contenu": "Je ne le comprends toujours pas .",
       "postId": "4",
       "date": "2026-02-21"
+    },
+    {
+      "id": "1a92",
+      "contenu": "that it",
+      "postId": "1",
+      "date": "2026-02-21"
+    },
+    {
+      "id": "cd6f",
+      "contenu": "Ajax pas mal comme méthode.",
+      "postId": "2",
+      "date": "2026-03-01"
+    },
+    {
+      "id": "8824",
+      "contenu": "Ca date de 20 ans minimum",
+      "postId": "3",
+      "date": "2026-03-01"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
